@@ -3,8 +3,10 @@
 
 #define MAX_WORD_NUM		32
 
-#define DONE		0		//已经完成排序
-#define UNDONE		1		//未完成排序
+//已经完成排序
+#define DONE		0
+//未完成排序
+#define UNDONE		1
 
 int main(int argc, char** argv)
 {
