@@ -26,18 +26,18 @@ int main(int argc, char** argv)
 		buf[i] = argv[i+1];
 
 	/*冒泡排序，注意循环的层次与方向*/
-	for(i=1; i<buf_len && flag; i++)
+	for(i=0; i<buf_len-1 && flag; i++)
 	{
 		flag = DONE;
 		cnt++;
 
-		for(j=buf_len-1; j>=i; j--)
+		for(j=buf_len-2; j>=i; j--)
 		{
-			if(strcmp(buf[j-1],buf[j]) > 0)	//从小向大排列
+			if(strcmp(buf[j],buf[j+1]) > 0)	//从小向大排列
 			{
-				temp = buf[j];
-				buf[j] = buf[j-1];
-				buf[j-1] = temp;
+				temp = buf[j+1];
+				buf[j+1] = buf[j];
+				buf[j] = temp;
 				
 				flag = UNDONE;
 			}
